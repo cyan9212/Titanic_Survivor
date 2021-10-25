@@ -91,6 +91,7 @@ cummulate_survival_ratio = []
 for i in range(1,80):
     cummulate_survival_ratio.append(df_train[df_train['Age'] < i]['Survived'].sum() / len(df_train[df_train['Age'] < i]['Survived']))
 
+    
 plt.figure(figsize=(7,7))
 plt.plot(cummulate_survival_ratio)
 plt.title('Survival rate change depending on range of Age',y=1.02)
